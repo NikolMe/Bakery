@@ -1,6 +1,8 @@
 ﻿import {CommonModule} from '@angular/common';
 import {ChangeDetectionStrategy, Component, Input, NgModule, OnInit} from '@angular/core';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {$} from "protractor";
 
 @Component({
   selector: 'app-form',
@@ -9,8 +11,11 @@ import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormComponent implements OnInit {
-  showFormContent: boolean = true;
 
+  constructor(private http: HttpClient) {
+  }
+
+  showFormContent: boolean = true;
   userName: string = '';
   phoneNumber: string = '';
 
@@ -18,6 +23,17 @@ export class FormComponent implements OnInit {
     this.showFormContent = false;
     this.userName = this.myForm!.get('name')?.value;
     this.phoneNumber = this.myForm!.get('phoneNumber')?.value;
+
+    if (this.myForm.valid) {
+      const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+      this.http.post('https://formspree.io/f/mvoekdvr',
+        { name: "Bakery", replyto: "antukovan@gmail.com", message: "New order" },
+        { 'headers': headers }).subscribe(
+        response => {
+          console.log(response);
+        }
+      );
+    }
   }
 
   myForm: FormGroup | undefined;

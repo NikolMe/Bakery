@@ -10,6 +10,7 @@ article {
 .feedback-container {
   width: 550px;
   margin-right: 20px;
+  margin-left: 20px;
 }
 
 .feedback-container h2 {
@@ -23,7 +24,6 @@ article {
 }
 
 .feedback-content {
-  font-family: 'Lato', sans-serif;
   font-size: 18px;
   color: #b1aea1;
 }

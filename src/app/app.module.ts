@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {HeaderComponent} from "../components/header/header.component";
 import {AdvantagesComponent} from "../components/advantages/advantages.component";
 import {FooterComponent} from "../components/footer/footer.component";
@@ -11,6 +11,7 @@ import {OffersComponent} from "../components/offers/offers.component";
 import {FeedbackComponent} from "../components/feedback/feedback.component";
 import {FormComponent} from "../components/form/form.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,11 +25,13 @@ import {ReactiveFormsModule} from "@angular/forms";
     FeedbackComponent,
     FormComponent
   ],
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule
-    ],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

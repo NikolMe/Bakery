@@ -1,6 +1,6 @@
 footer {
   background-color: #4b4242;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -43,6 +43,11 @@ font-weight: 400;
   width: 600px;
   height: 300px;
   border: 0;
+}
+
+.social-media img {
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 1000px) {
