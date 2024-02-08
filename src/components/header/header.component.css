@@ -41,14 +41,13 @@ h1 {
   background-color: #673800;
 }
 
-.btn:hover
-{
+.btn:hover {
   cursor: pointer;
 }
 
 .nav-btn {
   text-decoration: none;
-  background-color:#fffaec;
+  background-color: #fffaec;
   font-weight: 700;
   border: none;
   color: #15120f;
@@ -81,7 +80,7 @@ h1 {
   top: 0;
   width: 100%;
   left: 0;
-  background-color:#fffaec;
+  background-color: #fffaec;
 }
 
 .nav-buttons img {
@@ -96,6 +95,12 @@ h1 {
 @media screen and (max-width: 1100px) {
   .nav-buttons {
     padding-left: 10%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-buttons {
+    display: none;
   }
 }
 
