@@ -1,0 +1,149 @@
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.feedback-container {
+  width: 550px;
+  margin-right: 20px;
+}
+
+.feedback-container h2 {
+  width: 350px;
+}
+
+.feedback {
+  background-color: #fffaec;
+  padding: 20px;
+  width: 90%;
+}
+
+.feedback-content {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #b1aea1;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.next-button {
+  background-color: #fff0c1;
+  border: none;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.next-button:hover {
+  background-color: #d36940;
+  color: white;
+}
+
+.scroll-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.feedback-image img {
+  width: 450px;
+}
+
+.title-image img {
+  width: 180px;
+}
+
+.author {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.star-rating {
+  font-size: 26px;
+  color: #dcdcdc;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.star-rating span {
+  color: #ffc200;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.star-rating::before {
+  content: "★★★★★";
+  color: #dcdcdc;
+  display: inline-block;
+}
+
+.star-rating span::before {
+  content: "★★★★★";
+  color: #ffc200;
+}
+
+.star-rating span[style*="width"]::before {
+  width: 100%;
+}
+
+.author-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 1100px) {
+  .feedback-image {
+    display: none;
+  }
+
+  .feedback-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .title {
+    width: 90%;
+  }
+
+  .feedback-container h2 {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .title {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .feedback-container h2 {
+    width: 90%;
+  }
+
+  .quotes-image {
+    display: none;
+  }
+}

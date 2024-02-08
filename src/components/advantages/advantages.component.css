@@ -1,0 +1,72 @@
+article {
+  color: #3d3031;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  font-family: 'Montserrat';
+}
+
+.advantages-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.bakery-image {
+  width: 38vw;
+  border-radius: 4vw;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+.title h2 {
+  font-size: 30px;
+  color: #71451B;
+}
+
+.desc {
+  width: 30%;
+  font-size: 22px;
+  margin-right: 30px;
+}
+
+.feature-item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+
+.feature-desc h3 {
+  margin: 0;
+}
+
+.feature-desc p {
+  font-family: 'Lato', sans-serif;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+
+  .advantages-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .desc {
+    width: 90%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .bakery-image {
+    width: 70vw;
+  }
+}

@@ -1,0 +1,31 @@
+﻿<article>
+  <div class="feedback-container">
+    <img class="quotes-image" src="assets/images/quotes.png">
+    <div class="title">
+      <h2 style="text-align: left">Що ж кажуть наші клієнти?</h2>
+      <div class="title-image">
+        <img src="assets/images/bread.png">
+      </div>
+    </div>
+    <div class="feedback">
+      <p class="feedback-content">
+        "{{feedbackList[startIndex].feedback}}"
+      </p>
+      <div class="author-container">
+        <div>
+          <div class="star-rating">
+            <span [style.width.%]="(feedbackList[startIndex].rate / 5) * 100"></span>
+          </div>
+          <p class="author">-{{feedbackList[startIndex].name}}</p>
+        </div>
+        <div class="scroll-buttons">
+          <button class="next-button" (click)="ShowPrevious()">←</button>
+          <button class="next-button" (click)="ShowNext()">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="feedback-image">
+    <img src="assets/images/feedback.png">
+  </div>
+</article>

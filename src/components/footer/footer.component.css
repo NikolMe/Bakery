@@ -1,0 +1,57 @@
+footer {
+  background-color: #4b4242;
+  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 30px;
+  color: #f7f5f3;
+}
+
+span {
+  color: #D2683F;
+  font-weight: 500;
+}
+
+.contact-info {
+  width: 28%;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+font-weight: 400;
+}
+
+.contact {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.map {
+  width: 600px;
+  height: 300px;
+  border: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-info {
+    width: 90%;
+  }
+
+  .map {
+    width: 90%;
+    border: 0;
+  }
+}

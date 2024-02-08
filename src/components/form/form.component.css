@@ -1,0 +1,87 @@
+﻿article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5%;
+  font-family: 'Lato', sans-serif;
+}
+
+.form-container {
+  padding: 40px;
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.order-form {
+  width: 30%;
+  height: 440px;
+  background-color: #FFF2E7;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.field label {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #71451B;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.field input {
+  border: solid #71451B 1px;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.btn {
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: #945000;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.invalid-btn {
+  background-color: #945000;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.form-confirmed {
+  margin-top: 150px;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .order-form {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .order-form {
+    width: 70%;
+  }
+}

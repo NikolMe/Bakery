@@ -1,0 +1,123 @@
+header {
+  background-color: #fffaec;
+  color: #5c5855;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: #704319;
+  font-size: 4vw;
+  font-weight: bolder;
+  width: 550px;
+}
+
+.info {
+  font-size: 24px;
+  width: 550px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #ffaf61;
+  border: none;
+  color: #241307;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.btn:hover
+{
+  color: white;
+  background-color: #da944e;
+}
+
+.nav-btn {
+  text-decoration: none;
+  background-color:#fffaec;
+  font-weight: 700;
+  border: none;
+  color: #15120f;
+  font-size: 20px;
+  border-radius: 25px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.nav-btn:hover {
+  background-color: #ffdfcb;
+  cursor: pointer;
+}
+
+.main-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 18%;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color:#fffaec;
+}
+
+.nav-buttons img {
+  margin-right: 15px;
+}
+
+.bakery img {
+  width: 30vw;
+}
+
+@media screen and (max-width: 1100px) {
+  .nav-buttons {
+    padding-left: 10%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .nav-buttons {
+    display: none;
+  }
+
+  .bakery img {
+    width: 60vw;
+  }
+
+  .main-info {
+    text-align: center;
+  }
+
+  .info {
+    font-size: 22px;
+    width: 90%;
+  }
+
+  .bakery-desc {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 32px;
+    width: 90%;
+  }
+}

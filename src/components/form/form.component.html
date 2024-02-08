@@ -1,0 +1,22 @@
+﻿<article id="order">
+  <form class="order-form" [formGroup]="myForm!" (ngSubmit)="onSubmit()">
+    <div *ngIf="showFormContent" class="form-content">
+      <h2>Зацікавились?</h2>
+      <p>Залиште номер телефону і ми вам зателефонуємо</p>
+      <div class="field">
+        <label for="name">Ім'я</label>
+        <input type="text" id="name" formControlName="name">
+      </div>
+      <div class="field">
+        <label for="phoneNumber">Номер телефону</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" formControlName="phoneNumber">
+      </div>
+      <button type="submit" [disabled]="myForm!.invalid"  [ngClass]="{ 'btn': true, 'invalid-btn': myForm!.invalid }" (click)="SendForm()" class="btn">Відправити</button>
+    </div>
+    <div *ngIf="!showFormContent" class="form-confirmed">
+      <h2>Дякуємо за замовлення</h2>
+      <p>Наш адміністратор зв'яжеться з вами найближчим часом!</p>
+    </div>
+  </form>
+  <div class="line"></div>
+</article>
