@@ -12,6 +12,7 @@ import {FeedbackComponent} from "../components/feedback/feedback.component";
 import {FormComponent} from "../components/form/form.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {PopupComponent} from "../components/popup/popup.component";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {HttpClientModule} from "@angular/common/http";
     ProductsComponent,
     OffersComponent,
     FeedbackComponent,
-    FormComponent
+    FormComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,7 @@
 ﻿import {CommonModule} from '@angular/common';
-import {ChangeDetectionStrategy, Component, Input, NgModule, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, Input, NgModule, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {$} from "protractor";
 
 @Component({
   selector: 'app-form',
@@ -26,8 +25,17 @@ export class FormComponent implements OnInit {
 
     if (this.myForm.valid) {
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+      const currentDate = new Date();
+
+      const time = currentDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      const date = currentDate.toLocaleDateString([], { day: '2-digit', month: '2-digit', year: 'numeric' });
+
+      const formattedDateTime = `${time} ${date}`;
+
+      let message = "Користувач " + this.userName + " надіслав(ла) свій номер телефону " + this.phoneNumber + " о " + formattedDateTime;
       this.http.post('https://formspree.io/f/mvoekdvr',
-        { name: "Bakery", replyto: "antukovan@gmail.com", message: "New order" },
+        { name: "Bakery", replyto: "antukovan@gmail.com", message: message },
         { 'headers': headers }).subscribe(
         response => {
           console.log(response);
